@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" language="javascript">
+	function serchEmpName() {
+		document.SubmitForm.action = "Search.html"
+		// document.Form1.target = "_blank";    // Open in a new window
+
+		document.Form1.submit(); // Submit the page
+
+		return true;
+	}
+	function serchAction() {
+		document.SubmitForm.action = "SearchServlet.java"
+		// document.Form1.target = "_blank";    // Open in a new window
+
+		document.Form1.submit(); // Submit the page
+
+		return true;
+	}
+	
+	//List all
+	
+	function listOfEmpAction() {
+		document.SubmitForm.action = "ListAllServlet.java"
+		// document.Form1.target = "_blank";    // Open in a new window
+
+		document.Form1.submit(); // Submit the page
+
+		return true;
+	}
+	//Delete Employee
+	function deleteEmp() {
+		document.SubmitForm.action = "deleteEmp.html"
+		// document.Form1.target = "_blank";    // Open in a new window
+
+		document.Form1.submit(); // Submit the page
+
+		return true;
+	}
+	function deleteEmpAction() {
+		document.SubmitForm.action = "DeleteServlet.java"
+		// document.Form1.target = "_blank";    // Open in a new window
+
+		document.Form1.submit(); // Submit the page
+
+		return true;
+	}
+</script>
+</head>
+<body>
+	<form name="SubmitForm" action="SubmitForm" method="post">
+		Employee Name : <input type="text" name="empName"><br> 
+		EmployeeDesgn : <input type="text" name="empDesg"><br> 
+		Employee Dept : <input type="text" name="empDept"><br>
+	    Employee Add  : <input type="text" name="empAdd"><br><br>
+		<tr><td><input type="submit" name="Submit" /></td></tr>
+		<tr>
+			<td><input type="submit" name="Search" value="search" onclick="serchEmpName(); serchAction();" /></td>
+		</tr>
+
+		<tr>
+			<td><button type="submit" name="listall" onclick="listOfEmp(); listOfEmpAction();">ListAll</button></td>
+		</tr>
+		<tr>
+			<td><button type="submit" name="delete" oncancel="deleteEmpAction(); deleteEmp();">Delete</button></td>
+		</tr>
+		
+	</form>
+
+
+
+</body>
+</html>
